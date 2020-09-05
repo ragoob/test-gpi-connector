@@ -6,4 +6,4 @@ COPY  ./dist/ /usr/app/
 
 EXPOSE $PORT
 
-RUN npm run start:prod
+CMD ["node", "main"]
