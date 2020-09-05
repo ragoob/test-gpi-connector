@@ -1,10 +1,8 @@
 FROM arm32v7/node:10.15
 WORKDIR /usr/app
 ENV PORT 3000
-COPY  ./package*.json /usr/app/
-RUN npm install
+COPY  ./dist/ /usr/app/
 
-ADD . /usr/app
 
 EXPOSE $PORT
 
