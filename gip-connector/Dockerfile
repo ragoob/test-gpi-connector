@@ -1,4 +1,4 @@
-FROM node:12.13-alpine
+FROM arm32v7/node:10.15
 WORKDIR /app
 ENV PORT 3000
 ADD package.json /app/package.json
