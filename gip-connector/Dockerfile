@@ -8,4 +8,4 @@ ADD . /app
 
 EXPOSE $PORT
 
-CMD ["npm", "run", "start"]
+RUN npm run start:prod
