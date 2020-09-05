@@ -1,9 +1,9 @@
 FROM arm32v7/node:10.15
 WORKDIR /usr/app
 ENV PORT 3000
-COPY  ./dist/ /usr/app/
-
-
+COPY  . /usr/app/
+RUN npm install
+RUN npm run build
 EXPOSE $PORT
 
-CMD ["node", "main"]
+RUN npm run start:prod
