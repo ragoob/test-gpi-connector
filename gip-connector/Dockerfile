@@ -1,10 +1,10 @@
 FROM arm32v7/node:10.15
-WORKDIR /app
+WORKDIR /usr/app
 ENV PORT 3000
-ADD package.json /app/package.json
+ADD package.json /usr/app/package.json
 RUN npm install
 
-ADD . /app
+ADD . /usr/app
 
 EXPOSE $PORT
 
