@@ -7,12 +7,12 @@ export class AppController {
   constructor(private httpService: HttpService) { }
 
   @Get()
-  async getHello(): Promise<any> {
+  getHello(): any {
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-    const res = await this.httpService.get("https://gapi.aptar.mobi").toPromise();
+    //  const res = await this.httpService.get("https://gapi.aptar.mobi").toPromise();
     return {
-      api: "gpi",
-      data: res.data
+      api: "gpi"
+
     }
   }
 }
